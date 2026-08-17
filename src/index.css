@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #FAF8F5;
+    color: #1C1917;
+    overflow-x: hidden;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FAF8F5;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D5CDC4;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #B8451E;
+  }
+}
+
+@layer utilities {
+  /* Architectural Blueprint Grids */
+  .bg-grid-blueprint-light {
+    background-size: 32px 32px;
+    background-image: 
+      linear-gradient(to right, rgba(226, 102, 57, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(226, 102, 57, 0.08) 1px, transparent 1px);
+  }
+
+  .bg-grid-blueprint-dark {
+    background-size: 32px 32px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+  }
+
+  .bg-dots-pattern {
+    background-image: radial-gradient(#D5CDC4 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .bg-dots-pattern-dark {
+    background-image: radial-gradient(rgba(226, 102, 57, 0.25) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* Architectural crosshair marker */
+  .crosshair-corner {
+    position: relative;
+  }
+  .crosshair-corner::before,
+  .crosshair-corner::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    pointer-events: none;
+  }
+
+  /* Text balance for architectural headlines */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Clean glassmorphic surface */
+  .glass-surface {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .glass-surface-dark {
+    background: rgba(28, 25, 23, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+}
+
+/* Lenis smooth scrolling compatibility */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

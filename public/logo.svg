@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="blueGradientTop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D2FF" />
+      <stop offset="100%" stop-color="#4E65FF" />
+    </linearGradient>
+    <linearGradient id="blueGradientBottom" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00C0FF" />
+      <stop offset="100%" stop-color="#6B46C1" />
+    </linearGradient>
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFB703" />
+      <stop offset="100%" stop-color="#FB8500" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="50%" stop-color="#3A86FF" />
+      <stop offset="100%" stop-color="#8338EC" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Dark Container -->
+  <rect width="200" height="200" rx="24" fill="#0A0A0C" />
+
+  <!-- Top Chevron Outer -->
+  <path d="M100 18 L180 84 L142 84 L100 48 L58 84 L20 84 Z" fill="url(#blueGradientTop)" />
+
+  <!-- Top Chevron Inner Accent (Orange) -->
+  <path d="M100 48 L142 84 L80 84 Z" fill="url(#orangeGradient)" />
+
+  <!-- Center NLM Monogram -->
+  <g transform="translate(100, 108)" text-anchor="middle">
+    <text font-family="'Space Grotesk', 'Montserrat', 'Inter', system-ui, sans-serif" font-weight="900" font-size="40" letter-spacing="2" fill="url(#textGradient)">
+      NLM
+    </text>
+  </g>
+
+  <!-- Bottom Chevron Inner Accent (Orange) -->
+  <path d="M100 152 L80 116 L142 116 Z" fill="url(#orangeGradient)" />
+
+  <!-- Bottom Chevron Outer (Inverted) -->
+  <path d="M100 182 L20 116 L58 116 L100 152 L142 116 L180 116 Z" fill="url(#blueGradientBottom)" />
+</svg>
