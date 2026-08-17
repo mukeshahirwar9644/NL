@@ -45,7 +45,7 @@
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
 - **📐 3D Architectural Transformation Hero**
   Interactive Blueprint $\rightarrow$ Structure $\rightarrow$ Completed Building staging with architectural coordinates, measurement indicators, and floating value cards.
@@ -64,7 +64,7 @@
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Layer | Technology |
 | :--- | :--- |
@@ -126,7 +126,7 @@ d:\NLL\
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
